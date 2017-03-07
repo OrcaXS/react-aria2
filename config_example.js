@@ -1,6 +1,6 @@
 const config = {
   proto: 'http',
-  uri: '192.168.10.226',
+  uri: 'localhost',
   port: '6800',
   loc: 'jsonrpc',
 };
