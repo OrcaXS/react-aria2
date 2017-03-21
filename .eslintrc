@@ -1,21 +1,22 @@
 {
-  "parserOptions": {
-    "ecmaVersion": 8,
-    "sourceType": "module",
-    "ecmaFeatures": {
-      "jsx": true
+    "parserOptions": {
+        "ecmaVersion": 8,
+        "sourceType": "module",
+        "ecmaFeatures": {
+            "jsx": true
+        }
+    },
+    "env": {
+        "browser": true
+    },
+    "plugins": [
+        "react"
+    ],
+    "extends": ["eslint:recommended", "airbnb", "plugin:react/recommended"],
+    "rules": {
+        //   "comma-dangle":["error","always-multiline"],
+        "no-use-before-define": 0,
+        "no-unused-vars": 1,
+        "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }]
     }
-  },
-  "env": {
-    "browser": true
-  },
-  "plugins": [
-      "react"
-  ],
-  "extends": ["eslint:recommended", "airbnb", "plugin:react/recommended"],
-  "rules": {
-    //   "comma-dangle":["error","always-multiline"],
-    "no-use-before-define": 0,
-    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }]
-  }
 }

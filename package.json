@@ -7,8 +7,10 @@
 		"test": "jest"
 	},
 	"dependencies": {
+		"@shoutem/ui": "^0.10.13",
 		"react": "~15.4.1",
-		"react-native": "0.42.0"
+		"react-native": "0.42.3",
+		"uuid": "^3.0.1"
 	},
 	"devDependencies": {
 		"babel-jest": "19.0.0",
@@ -20,7 +22,9 @@
 		"eslint-plugin-jsx-a11y": "^4.0.0",
 		"eslint-plugin-react": "^6.10.0",
 		"jest": "19.0.2",
-		"react-test-renderer": "~15.4.1"
+		"react-dom": "^15.4.2",
+		"react-test-renderer": "~15.4.1",
+		"semantic-ui-react": "^0.67.0"
 	},
 	"jest": {
 		"preset": "react-native"
