@@ -1,3 +1,5 @@
+const uuidV4 = require('uuid/v4');
+
 class Aria2Method {
   constructor(method, param) {
     this.method = method;
@@ -14,7 +16,7 @@ class Aria2Method {
       },
       body: JSON.stringify({
         jsonrpc: '2.0',
-        id: 'qwer',
+        id: uuidV4(),
         method: this.method.toString(),
         param: [this.param],
       }),
