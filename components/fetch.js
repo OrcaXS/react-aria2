@@ -12,17 +12,8 @@ const fetchOptions = {
   body: JSON.stringify({ jsonrpc: '2.0', id: 'qwer', method: 'system.listMethods' }),
 };
 
-// function getfromAPIAsync() {   return fetch(configUri,
-// fetchOptions).then((response) => {     if (response.status !== 200) {
-// console.log(`Looks like there was a problem. Status Code:
-// ${response.status}`);       // return response.status;     }     // Examine
-// the text in the response     response       .json()       .then((data) => {
-// console.log(data);         render.text = data;         return data;   });
-// }).catch((err) => {     console.log('Fetch Error :-S', err);   }); }
 
-const configUri2 = 'http://192.168.10.226:6800/jsonrpc';
-
-export default class Fetch extends Component {
+class Fetch extends Component {
   constructor() {
     super();
     this.state = {
@@ -40,7 +31,7 @@ export default class Fetch extends Component {
 
   async fetchData() {
     try {
-      const response = await fetch(configUri2, fetchOptions);
+      const response = await fetch(configUri, fetchOptions);
       const json = await response.json();
       this.setState({ status: response.status });
       if (response.status !== 200) {
@@ -53,13 +44,6 @@ export default class Fetch extends Component {
       this.setState({ error: `${e.name}: ${e.message}` });
       console.log(e.message);
     }
-    // const data = json.result;
-    // console.log(response);
-    // console.log(json);
-    // console.log(status);
-    // console.log(`${JSON.stringify(response)} + ${JSON.stringify(json)} +
-    // ${status}`); this.setState(status);
-    // console.log(this.state);
   }
 
   render() {
@@ -79,4 +63,4 @@ export default class Fetch extends Component {
   }
 }
 
-// console.log(getfromAPIAsync()); console.log(render);
+export { fetchOptions, Fetch };

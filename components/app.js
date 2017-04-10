@@ -5,7 +5,8 @@ import {
   Text,
   View,
 } from 'react-native';
-import Fetch from './fetch';
+import { Fetch } from './fetch';
+import Aria2WS from './ws';
 
 export default class App extends Component {
   render() {
@@ -15,6 +16,7 @@ export default class App extends Component {
           Hello World
         </Text>
         <Fetch />
+        <Aria2WS />
       </View>
     );
   }
